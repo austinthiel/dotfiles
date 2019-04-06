@@ -15,14 +15,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'dracula/vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Bundle 'vim-ruby/vim-ruby'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Make configurations related to plugins here:
-colorscheme dracula
 set termguicolors
+colorscheme dracula
 
 " Core 
 set number
@@ -33,3 +33,5 @@ set hls
 set autoindent
 set shiftwidth=2
 set expandtab
+set rnu
+

@@ -13,6 +13,7 @@ alias prr="pm2 restart react"
 alias pla="pm2 log api"
 alias plr="pm2 log react"
 alias rs="redis-server"
+alias tmux="tmux -2"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -28,3 +29,4 @@ git config --global alias.last "log -1 HEAD"
 
 [ -z "$PS1" ] && return
 c() { cd "$@" && ls; }
+
