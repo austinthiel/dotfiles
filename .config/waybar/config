@@ -1,0 +1,84 @@
+{
+  "bar": {
+    "height": 37
+  },
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+
+  "modules-center": ["clock"],
+
+  "modules-right": [
+    "custom/crypto",
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "custom/power"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+
+  "custom/music": {
+    "format": "󰝚  {}",
+    "escape": true,
+    "interval": 1,
+    "tooltip": false,
+    "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+    "on-click": 100
+  },
+
+  "clock": {
+    "timezone": "America/Chicago",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%m/%d - %H:%M:%S}",
+    "interval": 1
+  },
+
+  "network": {
+    "format-wifi": "󰤢",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤠",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "cpu": {
+    "interval": 1,
+    "format": "{usage:>2}%",
+  },
+
+  "memory": {
+    "interval": 1,
+    "format": "{used:0.1f}G/{total:0.1f}G"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", " "]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout &",
+    "format": ""
+  },
+
+  "custom/crypto": {
+    "format": "{}",
+    "interval": 600,
+    "return-type": "json",
+    "exec": "waybar-crypto",
+    "exec-if": "ping pro-api.coinmarketcap.com -c1"
+  }
+}

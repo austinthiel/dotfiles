@@ -1,0 +1,41 @@
+* {
+  font-family: DejaVuSansMono Nerd Font;
+  font-size: 18px;
+}
+
+#waybar {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+#workspaces button {
+  margin: 0 0.5rem;
+}
+
+#workspaces button.active {
+  border-top: 4px solid #ffffff;
+}
+
+#workspaces button {
+  color: #ffffff;
+  background: transparent;
+}
+
+#custom-music,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#custom-power,
+#custom-crypto {
+  margin: 0 1rem;
+}
+
+#custom-crypto {
+    font-family: cryptofont;
+}
+
+
+
+
